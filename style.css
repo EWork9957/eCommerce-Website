@@ -1,0 +1,379 @@
+html{
+    overflow-x: hidden;
+}
+/*NAV BAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .navbar-custom{
+        background-color: black;
+    }
+    /*Search*/
+    .searchIcon{
+        margin-bottom: 2px;
+        margin-top: -2px;
+    }
+    .searchBar{
+        margin-left: 15px;
+    }
+    .heartIcon{
+        position: absolute;
+        left: 1380px;
+        border: solid rgb(235, 235, 235) 4px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 50px;
+        padding: 3px;
+    }
+    .cartIcon{
+        position: absolute;
+        left: 1325px;
+        border: solid rgb(235, 235, 235) 4px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 50px;
+        padding: 3px;
+    }
+    #TaC{
+        margin-left: 5px;
+    }
+/*MAGNIFIER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.topHead{
+    margin-bottom: 60px;
+}
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+/*ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.itemSets{
+    background-color: rgb(255,255,255);
+    padding-top: 5px; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    position:relative;
+    text-decoration: none;
+}
+.a1, .a2, .a3{
+    border: solid rgb(245, 245, 245) 1px;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.a1{
+    margin-left: 55px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    height: 550px;
+    width: 690px;
+    position: relative;
+    text-decoration: none;
+    
+}
+.a2{
+    margin-left: 30px;
+    margin-top: 100px;
+    height: 255px;
+    width: 690px;
+    float: inline-start;
+    left: 764px;
+    position: absolute;
+}
+.a3{
+    margin-left: -703px;
+    margin-top: 393px;
+    height: 255px;
+    width: 690px;
+    left: 1497px;
+    position: absolute;
+}
+.a4{
+    width: 690px;
+    height: 307px;
+    position: relative;
+    margin-top: 339.5px;/*388*/
+    margin-left: 37px;/*13*/
+    border-top: rgb(255, 255, 255) solid 30px;
+    border-bottom: rgb(255, 255, 255) solid 20px;
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+}
+a:link{
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+}
+/*BUY SECTION 1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Headsets*/
+.headsets{
+    font-size: 50px;
+    color:rgb(12,12,12);
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.headsetsInfo{
+    font-size: 20px;
+    color:rgb(68, 68, 68);
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+.headsetImg{
+    margin-left: 350px;
+    margin-top: -280px;
+}
+.headsetImg2{
+    margin-left: 320px;
+}
+/*Controller & Accessories*/
+.controllers, .accessories{
+    font-size: 25px;
+    color:rgb(12,12,12);
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 10;
+}
+.controllersInfo, .accessoriesInfo{
+    font-size: 16px;
+    color:rgb(68, 68, 68);
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.controllerLeftImg{
+    position: absolute;
+    margin-top: -230px;
+    margin-left: 270px;
+}
+.controllerRightImg{
+    position: absolute;
+    margin-top: -210px;
+    margin-left: 440px;
+    transform: rotate(230deg);
+}
+.AccessoriesImg{
+    margin-left: 420px;
+    margin-top: -240px;
+    transform: rotate(-30deg);
+}
+.a1{
+    margin-top: 95px;
+}
+/*Shop Button*/
+.shopNow{
+    width: 120px;
+    height: 45px;
+    border: solid rgb(49,49,49) 1px;
+    background-color: rgb(49,49,49);
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    margin-left: 50px;
+}
+/*Info Box~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.infoBox{
+    border: rgb(209, 209, 209) 1px solid;
+    margin-left: 55px;
+    width: 1400px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.infoHead{
+    font-size: 17px;
+}
+.infoText{
+    font-size: 15px;
+    margin-top: -15px;
+    color: rgb(48, 48, 48);
+}
+.Section1{
+    margin-top: 25px;
+    margin-left: 80px;
+}
+.Section2{
+    margin-top: -65px;
+    margin-left: 440px;
+    color: rgb(0, 0, 0);
+}
+.Section3{
+    margin-top: -65px;
+    margin-left: 820px;
+    color: rgb(0, 0, 0);
+}
+.Section4{
+    margin-top: -65px;
+    margin-left: 1200px;
+    color: rgb(0, 0, 0);
+}
+.shippingIcon{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -75px;
+}
+.returnIcon{
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 7px;
+}
+.secureIcon{
+    position: absolute;
+    margin-left: -60px;
+}
+.phoneIcon{
+    position: absolute;
+    margin-left: -50px;
+}
+/*Top Products~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+#topProd{
+    font-size: 35px;
+    margin-left: 55px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+.products{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.Product1{
+    margin-left: 55px;
+    margin-bottom: 90px;
+}
+.Product4{
+    margin-right: 50px;
+}
+/*Objects*/
+.productsInfoA{
+    position: absolute;
+    margin-top: -80px;
+    left: 180px;
+}
+.productsInfoB{
+    position: absolute;
+    margin-top: -80px;
+    left: 530px;
+}
+.productsInfoC{
+    position: absolute;
+    margin-top: -80px;
+    left: 890px;
+}
+.productsInfoD{
+    position: absolute;
+    margin-top: -80px;
+    left: 1230px;
+}
+.Object{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-left: -5px;
+}
+.Price{
+    color: rgb(49, 49, 49);
+    margin-left: 15px;
+}
+/*FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+
+.Bottom{
+    background-color: rgb(245,245,245);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    border-bottom: rgb(245,245,245) solid 260px;
+}
+.botTitle{
+    color: black;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botInformation{
+    margin-left: 450px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botAccount{
+    margin-left: -240px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botLetter{
+    margin-left: -350px;
+    font-family: 'Open Sans', sans-serif;
+}
+.eFormBox{
+    color: blue;
+    width: 330px;
+    height: 40px;
+}
+.eFormButton{
+    width: 145px;
+    height: 50px;
+    color: white;
+    background-color: black;
+}
+.botListAccount{
+    color: black;
+}
+#botLogo{
+    position: absolute;
+    left: 70px;
+}
+#botLogoTitle{
+    position: absolute;
+    left: 190px;
+    font-size: 50px;
+}
+#botLogoTitle2{
+    position: absolute;
+    left: 205px;
+    font-size: 35px;
+    margin-top: 50px;
+    font-family: 'Smooch Sans', sans-serif;
+}
+#botLogoTitle3{
+    position: absolute;
+    left: 80px;
+    font-size: 18px;
+    margin-top: 110px;
+    color: rgb(78, 78, 78);
+}
+.botInformation{
+    position: absolute;
+    left: 120px;
+}
+.botAccount{
+    position: absolute;
+    left: 1020px;
+}
+.botLetter{
+    position: absolute;
+    left: 1350px;
+}
+/*Logo Links*/
+.botFacebook{
+    position: absolute;
+    margin-top: 260px;
+    left: 83px;
+}
+.botTwitter{
+    position: absolute;
+    margin-top: 260px;
+    left: 123px;
+}
+.botInstagram{
+    position: absolute;
+    margin-top: 260px;
+    left: 163px;
+}
+.botIndeed{
+    position: absolute;
+    margin-top: 260px;
+    left: 203px;
+}
+
