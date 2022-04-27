@@ -1,6 +1,5 @@
 html{
     overflow-x: hidden;
-    margin-top: 90px;
 }
 /*NAV BAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     .navbar-custom{
@@ -33,212 +32,155 @@ html{
     #TaC{
         margin-left: 5px;
     }
-/*Item Top~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.ItemTop{
-    margin-top: 120px;
-    margin-left: 55px;
+/*MAGNIFIER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.topHead{
+    margin-bottom: 60px;
 }
-#Title{
-    color: rgb(255, 255, 255);
-    position: absolute;
-    top: 150px;
-    z-index: 20;
-    font-size: 50px;
-    font-family: 'Fredoka', sans-serif;
-    left: 42%;
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
 }
-.itemTitle{
-    position: absolute;
-    margin-top: -450px;
-    margin-left: 480px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
 }
-.Stars{
-    position: absolute;
-    margin-top: -405px;
-    margin-left: 480px;
-}
-#DPrice{
-    position: absolute;
-    margin-top: -345px;
-    margin-left: 480px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-}
-#OPrice{
-    position: absolute;
-    margin-top: -345px;
-    margin-left: 590px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
-    color: rgb(199, 0, 199);
-    text-decoration: line-through;
-}
-.Describe{
-    color: rgb(104, 104, 104);
-    margin-top: -295px;
-    margin-left: 480px;
-    font-size: 18px;
-}
-#CTitle{
-    position: absolute;
-    margin-left: 480px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-.SelectBox{
-    width: 200px;
-    height: 45px;
-    margin-left: 480px;
-    margin-top: 30px;
-}
-#Qty{
-    position: absolute;
-    margin-left: 480px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    margin-top: 20px;
-}
-#QtyBut{
-    position: absolute;
-    margin-left: 470px;
-    margin-top: 50px;
-}
-.ATCButton{
-    width: 130px;
-    height: 40px;
-    color: white;
-    background-color: black;
-    font-size: 15px;
-    font-family: 'Fredoka', sans-serif;
-    margin-left: 480px;
-    margin-top: 110px;
-}
-/*Accordion~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.Accordion{
-    width: 1410px;
-    margin-top: 70px;
-    margin-left: 60px;
-    border: 2px solid black;
-}
-.AccTitle{
-    color: rgb(199, 0, 199);
-}
-#AccInfo1a{
-    color: rgb(80, 80, 80);
-}
-#AccInfo1b{
-    margin-top: 10px;
-    margin-left: 30px;
-}
-#AddInfo1a, #AddInfo2a, #AddInfo3a{
-    color: rgb(0, 0, 0);
-    margin-bottom: -3px;
-}
-#AddInfo1b, #AddInfo2b, #AddInfo3b{
-    color: rgb(80, 80, 80);
-}
-.review{
-    width: 1370px;
-    height: 200px;
-    background-color: rgb(246, 246, 246);
-    margin-top: 20px;
-}
-#profile1{
-    position: relative;
-    left: 40px;
-    top: 40px;
-}
-.reviewName{
-    position: relative;
-    left: 120px;
-    font-family: 'Montserrat', sans-serif;
-    top: -35px;
-    font-size: 22px;
-}
-.reviewDate{
-    position: relative;
-    left: 120px;
-    font-family: 'Montserrat', sans-serif;
-    top: -55px;
-    font-size: 18px;
-    color: rgb(70, 70, 70);
-}
-.revStars{
-    position: relative;
-    left: 120px;
-    top: -75px;
-}
-.reviewText{
-    position: relative;
-    left: 120px;
-    font-family: 'Montserrat', sans-serif;
-    top: -65px;
-    font-size: 18px;
-    color: rgb(70, 70, 70);
-}
-.SeeMore{
-    width: 130px;
-    height: 40px;
-    color: white;
-    background-color: black;
-    font-size: 15px;
-    font-family: 'Fredoka', sans-serif;
-}
-/*Top Products~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
-#topProd{
-    font-size: 35px;
-    margin-left: 55px;
-    margin-top: 70px;
-    margin-bottom: 25px;
-}
-.products{
+/*ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.itemSets{
+    background-color: rgb(255,255,255);
+    padding-top: 5px; 
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    position:relative;
+    text-decoration: none;
 }
-.Product1{
-    margin-left: 55px;
-    margin-bottom: 90px;
-}
-.Product4{
-    margin-right: 50px;
-}
-/*Objects*/
-.productsInfoA{
-    position: absolute;
-    margin-top: -80px;
-    left: 180px;
-}
-.productsInfoB{
-    position: absolute;
-    margin-top: -80px;
-    left: 530px;
-}
-.productsInfoC{
-    position: absolute;
-    margin-top: -80px;
-    left: 890px;
-}
-.productsInfoD{
-    position: absolute;
-    margin-top: -80px;
-    left: 1230px;
-}
-.Object{
-    color: rgb(0, 0, 0);
+.a1, .a2, .a3{
+    border: solid rgb(245, 245, 245) 1px;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    margin-left: -20px;
 }
-.Price{
-    color: rgb(49, 49, 49);
-    margin-left: 15px;
+.a1{
+    margin-left: 55px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    height: 550px;
+    width: 690px;
+    position: relative;
+    text-decoration: none;
+    
+}
+.a2{
+    margin-left: 30px;
+    margin-top: 100px;
+    height: 255px;
+    width: 690px;
+    float: inline-start;
+    left: 764px;
+    position: absolute;
+}
+.a3{
+    margin-left: -703px;
+    margin-top: 393px;
+    height: 255px;
+    width: 690px;
+    left: 1497px;
+    position: absolute;
+}
+.a4{
+    width: 690px;
+    height: 307px;
+    position: relative;
+    margin-top: 339.5px;/*388*/
+    margin-left: 37px;/*13*/
+    border-top: rgb(255, 255, 255) solid 30px;
+    border-bottom: rgb(255, 255, 255) solid 20px;
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+}
+a:link{
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+}
+/*BUY SECTION 1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Headsets*/
+.headsets{
+    font-size: 50px;
+    color:rgb(12,12,12);
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.headsetsInfo{
+    font-size: 20px;
+    color:rgb(68, 68, 68);
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+.headsetImg{
+    margin-left: 350px;
+    margin-top: -280px;
+}
+.headsetImg2{
+    margin-left: 320px;
+}
+/*Controller & Accessories*/
+.controllers, .accessories{
+    font-size: 25px;
+    color:rgb(12,12,12);
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 10;
+}
+.controllersInfo, .accessoriesInfo{
+    font-size: 16px;
+    color:rgb(68, 68, 68);
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.controllerLeftImg{
+    position: absolute;
+    margin-top: -230px;
+    margin-left: 270px;
+}
+.controllerRightImg{
+    position: absolute;
+    margin-top: -210px;
+    margin-left: 440px;
+    transform: rotate(230deg);
+}
+.AccessoriesImg{
+    margin-left: 420px;
+    margin-top: -240px;
+    transform: rotate(-30deg);
+}
+.a1{
+    margin-top: 95px;
+}
+/*Shop Button*/
+.shopNow{
+    width: 120px;
+    height: 45px;
+    border: solid rgb(49,49,49) 1px;
+    background-color: rgb(49,49,49);
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    margin-left: 50px;
 }
 /*Info Box~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .infoBox{
     border: rgb(209, 209, 209) 1px solid;
     margin-left: 55px;
-    margin-top: 50px;
     width: 1400px;
     height: 100px;
     border-radius: 5px;
@@ -288,6 +230,54 @@ html{
 .phoneIcon{
     position: absolute;
     margin-left: -50px;
+}
+/*Top Products~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+#topProd{
+    font-size: 35px;
+    margin-left: 55px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+.products{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.Product1{
+    margin-left: 55px;
+    margin-bottom: 90px;
+}
+.Product4{
+    margin-right: 50px;
+}
+/*Objects*/
+.productsInfoA{
+    position: absolute;
+    margin-top: -80px;
+    left: 180px;
+}
+.productsInfoB{
+    position: absolute;
+    margin-top: -80px;
+    left: 530px;
+}
+.productsInfoC{
+    position: absolute;
+    margin-top: -80px;
+    left: 890px;
+}
+.productsInfoD{
+    position: absolute;
+    margin-top: -80px;
+    left: 1230px;
+}
+.Object{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-left: -5px;
+}
+.Price{
+    color: rgb(49, 49, 49);
+    margin-left: 15px;
 }
 /*FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 
@@ -351,7 +341,7 @@ html{
     left: 80px;
     font-size: 18px;
     margin-top: 110px;
-    color: rgb(104, 104, 104);
+    color: rgb(78, 78, 78);
 }
 .botInformation{
     position: absolute;
