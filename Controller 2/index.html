@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        <title>Controller 2</title>
+<!--NAVBAR Script~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <script>
+            function magnify(imgID, zoom) {
+              var img, glass, w, h, bw;
+              img = document.getElementById(imgID);
+              /*create magnifier glass:*/
+              glass = document.createElement("DIV");
+              glass.setAttribute("class", "img-magnifier-glass");
+              /*insert magnifier glass:*/
+              img.parentElement.insertBefore(glass, img);
+              /*set background properties for the magnifier glass:*/
+              glass.style.backgroundImage = "url('" + img.src + "')";
+              glass.style.backgroundRepeat = "no-repeat";
+              glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+              bw = 3;
+              w = glass.offsetWidth / 2;
+              h = glass.offsetHeight / 2;
+              /*execute a function when someone moves the magnifier glass over the image:*/
+              glass.addEventListener("mousemove", moveMagnifier);
+              img.addEventListener("mousemove", moveMagnifier);
+              /*and also for touch screens:*/
+              glass.addEventListener("touchmove", moveMagnifier);
+              img.addEventListener("touchmove", moveMagnifier);
+              function moveMagnifier(e) {
+                var pos, x, y;
+                /*prevent any other actions that may occur when moving over the image*/
+                e.preventDefault();
+                /*get the cursor's x and y positions:*/
+                pos = getCursorPos(e);
+                x = pos.x;
+                y = pos.y;
+                /*prevent the magnifier glass from being positioned outside the image:*/
+                if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+                if (x < w / zoom) {x = w / zoom;}
+                if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+                if (y < h / zoom) {y = h / zoom;}
+                /*set the position of the magnifier glass:*/
+                glass.style.left = (x - w) + "px";
+                glass.style.top = (y - h) + "px";
+                /*display what the magnifier glass "sees":*/
+                glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+              }
+              function getCursorPos(e) {
+                var a, x = 0, y = 0;
+                e = e || window.event;
+                /*get the x and y positions of the image:*/
+                a = img.getBoundingClientRect();
+                /*calculate the cursor's x and y coordinates, relative to the image:*/
+                x = e.pageX - a.left;
+                y = e.pageY - a.top;
+                /*consider any page scrolling:*/
+                x = x - window.pageXOffset;
+                y = y - window.pageYOffset;
+                return {x : x, y : y};
+              }
+            }
+        </script>
+    </head>
+    <body>
+<!--NAVBAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <nav class="navbar navbar-light bg-light fixed-top navbar-custom" style="background-color: #42779c;">
+            <div class="container-fluid">
+            <!--NAV BUTTONS-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a href="#" class="navbar-brand">
+                            <img src="images/VRLogo.png" height="50" alt="VRLogo">
+                        </a> 
+                        <a class="navbar-brand" href="#">ULT-VR</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <a>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="file:///C:/Users/eworkm610/Documents/2)%20Projects/eCommerce%20Website/1)%20eCom%20Home/index.html">Home</a>
+                                    </li>
+                                </a>
+                                <a>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="file:///C:/Users/eworkm610/Documents/2)%20Projects/eCommerce%20Website/3)%20eCom%20ControllerPage/index.html">Controllers</a>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="heartIcon" onclick="window.open('')">
+                        <img src="images/Heart Icon.png" height="20px" width="23px" alt="HeartLogo">
+                    </a>
+                    <a href="#" class="cartIcon" onclick="window.open('')">
+                        <img src="images/Cart Icon.png" height="25px" width="25px" alt="HeartLogo">
+                    </a>
+                </nav>
+                <!--OFFCANVAS-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="#" class="navbar-brand">
+                            <img src="images/VRLogo.png" height="50" alt="VRLogo">
+                        </a> 
+                        <a class="navbar-brand" href="#">ULT-VR</a>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!--SEARCH-->
+                    <div class="search-container">
+                        <form>
+                            <input type="text" placeholder="Search..." name="search" class="searchBar">
+                            <button type="submit" class="searchButton">
+                                <img src="images/Search Icon.png" width="20px" height="20px" class="searchIcon">
+                            </button><br><br>
+                        </form>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Address: _________________________________</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Call Us: _________________________________</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Email: _________________________________</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Social Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li>
+                                        <a href="#" class="dropdown-item" onclick="window.open('https://www.facebook.com/')">
+                                            <img src="images/FacebookLogo.png" height="25" alt="VRLogo">&nbsp;&nbsp;Facebook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item"onclick="window.open('https://twitter.com/')">
+                                            <img src="images/TwitterLogo.png" height="25" alt="VRLogo">&nbsp;&nbsp;Twitter
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item"onclick="window.open('https://www.instagram.com/')">
+                                            <img src="images/InstagramLogo.png" height="25" alt="VRLogo">&nbsp;&nbsp;Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item"onclick="window.open('https://www.indeed.com/')">
+                                            <img src="images/IndeedLogo.png" height="25" alt="VRLogo">&nbsp;&nbsp;Indeed
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Terms & Conditions</a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li>
+                                        <p id="TaC">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<!--Landscape Background~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <img src="images/Landscape Background.PNG" width="100%" height="260px">
+        <p id="Title">Shop</p>
+<!--Item~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="ItemTop">
+            <img id="itemImage" src="images/Controller2.PNG" width="450px" height="450px">
+            <div class="itemTitle">
+                <p>Item Name</p>
+            </div>
+            <div class="Stars">
+                <img id="star1" src="images/Review Star Yellow.png" width="20px" height="20px">
+                <img id="star2" src="images/Review Star Yellow.png" width="20px" height="20px">
+                <img id="star3" src="images/Review Star Yellow.png" width="20px" height="20px">
+                <img id="star4" src="images/Review Star Yellow.png" width="20px" height="20px">
+                <img id="star5" src="images/Review Star.png" width="20px" height="20px">
+                <p>(24.5k Reviews)<br></p>
+            </div>
+            <div class="Price">
+                <p id="DPrice"><b>$215.99</b></p>
+                <p id="OPrice"><b>$249.99</b></p>
+            </div>
+            <div class="Describe">
+                <p id="Info">Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin <br> eget tortor risus. Nulla porttitoraccumsan tincidunt. Pellentesque in ipsum id orci porta dapibus.</p>
+            </div>
+            <div class="Select">
+                <p id="CTitle"><b>Color</b></p>
+                <form>
+                    <select class="SelectBox" name="Color" id="color">
+                        <option value="Select">Select</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Gray">Gray</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                </form>
+            </div>
+            <div class="Quantity">
+                <p id="Qty"><b>Quantity</b></p>
+                <img id="QtyBut" src="images/Qty.PNG" width="130" height="50px">
+            </div>
+            <div class="ATC">
+                <button class="ATCButton">ADD TO CART</button>
+            </div>
+        </div>
+<!--Accordion~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="Accordion">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="AccTitle">Description</div>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="AccInfo1">
+                            <p id="AccInfo1a">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+                            <p id="AccInfo1b">
+                                <ul>
+                                    <li>Vivamus magna justo, lacinia eget consectetur sed</li>
+                                    <li>Curabitur aliquet quam id dui posuere blandit</li>
+                                    <li>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar</li>
+                                </ul>
+                            </p>
+                            <p id="AccInfo1c">Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <div class="AccTitle">Additional Information</div>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="AddInfo1">
+                            <p id="AddInfo1a"><b>Weight: </b></p>
+                            <p id="AddInfo1b"><b>.65lbs </b></p>
+                        </div>
+                        <div class="AddInfo2">
+                            <p id="AddInfo2a"><b>Dimensions: </b></p>
+                            <p id="AddInfo2b"><b>1" x 6" x 3" </b></p>
+                        </div>
+                        <div class="AddInfo3">
+                            <p id="AddInfo3a"><b>Other Info: </b></p>
+                            <p id="AddInfo3b"><b>Mauris luctus nisi sapien tristique dignissim ornare. </b></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <div class="AccTitle">Reviews</div>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="review">
+                            <img id="profile1" src="images/Profile Icon.png" width="65px" height="65px">
+                            <div class="reviewName">
+                                <p><b>John Doe</b></p>
+                            </div>
+                            <div class="reviewDate">
+                                <p>2 days ago</p>
+                            </div>
+                            <div class="revStars">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                            </div>
+                            <div class="reviewText">
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque Praesent sapien massa, convallis a pellentesque <br> nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum <br> sed sit amet dui. Vivamus magna justo.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <img id="profile1" src="images/Profile Icon.png" width="65px" height="65px">
+                            <div class="reviewName">
+                                <p><b>John Doe</b></p>
+                            </div>
+                            <div class="reviewDate">
+                                <p>4 days ago</p>
+                            </div>
+                            <div class="revStars">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star.png" width="20px" height="20px">
+                            </div>
+                            <div class="reviewText">
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque Praesent sapien massa, convallis a pellentesque <br> nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum <br> sed sit amet dui. Vivamus magna justo.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <img id="profile1" src="images/Profile Icon.png" width="65px" height="65px">
+                            <div class="reviewName">
+                                <p><b>John Doe</b></p>
+                            </div>
+                            <div class="reviewDate">
+                                <p>7 days ago</p>
+                            </div>
+                            <div class="revStars">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star Yellow.png" width="20px" height="20px">
+                                <img src="images/Review Star.png" width="20px" height="20px">
+                            </div>
+                            <div class="reviewText">
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque Praesent sapien massa, convallis a pellentesque <br> nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum <br> sed sit amet dui. Vivamus magna justo.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="SeeMore">
+                            <button class="SeeMore">See More</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+<!--InfoBox~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="infoBox">
+            <div class="Section1">
+                <div class="shippingIcon"><img src="images/Shipping Icon.png" alt="Shipping Icon" width="65px" height="65px"></div>
+                <p class="infoHead"><b>Free Shipping</b></p>
+                <p class="infoText">On all orders over $75.00</p>
+            </div>
+            <div class="Section2">
+                <div class="returnIcon"><img src="images/Return Icon.png" alt="Shipping Icon" width="35px" height="35px"></div>
+                <p class="infoHead"><b>Free Returns</b></p>
+                <p class="infoText">Returns are free within 9 days</p>
+            </div>
+            <div class="Section3">
+                <div class="secureIcon"><img src="images/Payment Icon.png" alt="Shipping Icon" width="50px" height="50px"></div>
+                <p class="infoHead"><b>100% Payment Secure</b></p>
+                <p class="infoText">Your payment are safe with us.</p>
+            </div>
+            <div class="Section4">
+                <div class="phoneIcon"><img src="images/Phone Icon.png" alt="Shipping Icon" width="50px" height="50px"></div>
+                <p class="infoHead"><b>Support 24/7</b></p>
+                <p class="infoText">Contact us 24 hours a day</p>
+            </div>
+        </div>
+<!--Footer~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="Bottom">
+            <div class="botLeft">
+                <img id="botLogo" src="images/VRLogo.png" width="100px" height="100px">
+                <p id="botLogoTitle">ULT-VR</p>
+                <p id="botLogoTitle2">A New World</p>
+                <p id="botLogoTitle3">Lorem ipsum dolor sit, amet consectetur <br> adipisicing elit. Obcaecati culpa assumenda <br> voluptas placeat amet consectetur adipisicing <br> elit. Obcaecati culpa assumenda voluptas <br> placeat.</p>
+                <div class="botFacebook">
+                    <a href="#" onclick="window.open('https://www.facebook.com/')">
+                        <img src="images/FacebookLogo.png" height="25" alt="VRLogo">
+                    </a>
+                </div>
+                <div class="botTwitter">
+                    <a href="#" onclick="window.open('https://twitter.com/')">
+                        <img src="images/TwitterLogo.png" height="25" alt="VRLogo">
+                    </a>
+                </div>
+                <div class="botInstagram">
+                    <a href="#" onclick="window.open('https://www.instagram.com/')">
+                        <img src="images/InstagramLogo.png" height="25" alt="VRLogo">
+                    </a>
+                </div>
+                <div class="botIndeed">
+                    <a href="#" onclick="window.open('https://www.indeed.com/')">
+                        <img src="images/IndeedLogo.png" height="25" alt="VRLogo">
+                    </a>
+                </div>
+            </div>
+            <div class="botInformation">
+                <p class="botTitle" id="botInfo"><b>INFORMATION</b></p>
+                <div class="botListInfo">
+                    <p id="info1"><a href="#">Home</a></p>
+                    <p id="info2"><a href="#">About US</a></p>
+                    <p id="info3"><a href="#">FAQ</a></p>
+                    <p id="info4"><a href="#">Order Tracking</a></p>
+                    <p id="info5"><a href="#">Shop</a></p>
+                </div>
+            </div>
+            <div class="botAccount">
+                <p class="botTitle" id="botAct"><b>YOUR ACCOUNT</b></p>
+                <div class="botListAccount">
+                    <p id="act1"><a href="#">Cart</a></p>
+                    <p id="act2"><a href="#">Checkout</a></p>
+                    <p id="act3"><a href="#">Wishlist</a></p>
+                    <p id="act4"><a href="#">Reviews</a></p>
+                    <p id="act5"><a href="#">Returns</a></p>
+                </div>
+            </div> 
+            <div class="botLetter">
+                <p class="botTitle" id="botAct"><b>NEWSLETTER</b></p>
+                <div class="botListAccount">
+                    <div class="eForm">
+                        <form>
+                            <input class="eFormBox" type="email" id="email" name="email" placeholder="Your Mail*"><br><br>
+                            <input class ="eFormButton" type="submit">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div> 
+        </div>
+<!--Script~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <script>
+            magnify("myimage", 1.7);
+        </script>
+    </body>
+</html>
