@@ -1,0 +1,341 @@
+html{
+    overflow-x: hidden;
+    margin-top: 90px;
+}
+/*NAV BAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .navbar-custom{
+        background-color: black;
+    }
+    /*Search*/
+    .searchIcon{
+        margin-bottom: 2px;
+        margin-top: -2px;
+    }
+    .searchBar{
+        margin-left: 15px;
+    }
+    .heartIcon{
+        position: absolute;
+        left: 1380px;
+        border: solid rgb(235, 235, 235) 4px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 50px;
+        padding: 3px;
+    }
+    .cartIcon{
+        position: absolute;
+        left: 1325px;
+        border: solid rgb(235, 235, 235) 4px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 50px;
+        padding: 3px;
+    }
+    #TaC{
+        margin-left: 5px;
+    }
+/*Item Top~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ItemTop{
+    margin-top: 120px;
+    margin-left: 55px;
+}
+#Title{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 150px;
+    z-index: 20;
+    font-size: 50px;
+    font-family: 'Fredoka', sans-serif;
+    left: 46%;
+}
+.itemTitle{
+    position: absolute;
+    margin-top: -450px;
+    margin-left: 480px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+.Stars{
+    position: absolute;
+    margin-top: -405px;
+    margin-left: 480px;
+}
+#DPrice{
+    position: absolute;
+    margin-top: -345px;
+    margin-left: 480px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+#OPrice{
+    position: absolute;
+    margin-top: -345px;
+    margin-left: 590px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: rgb(199, 0, 199);
+    text-decoration: line-through;
+}
+.Describe{
+    color: rgb(104, 104, 104);
+    margin-top: -295px;
+    margin-left: 480px;
+    font-size: 18px;
+}
+#CTitle{
+    position: absolute;
+    margin-left: 480px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.SelectBox{
+    width: 200px;
+    height: 45px;
+    margin-left: 480px;
+    margin-top: 30px;
+}
+#Qty{
+    position: absolute;
+    margin-left: 480px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#QtyBut{
+    position: absolute;
+    margin-left: 470px;
+    margin-top: 50px;
+}
+.ATCButton{
+    width: 130px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Fredoka', sans-serif;
+    margin-left: 480px;
+    margin-top: 110px;
+}
+/*Accordion~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.Accordion{
+    width: 1410px;
+    margin-top: 70px;
+    margin-left: 60px;
+    border: 2px solid black;
+}
+.AccTitle{
+    color: rgb(199, 0, 199);
+}
+#AccInfo1a{
+    color: rgb(80, 80, 80);
+}
+#AccInfo1b{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#AddInfo1a, #AddInfo2a, #AddInfo3a{
+    color: rgb(0, 0, 0);
+    margin-bottom: -3px;
+}
+#AddInfo1b, #AddInfo2b, #AddInfo3b{
+    color: rgb(80, 80, 80);
+}
+.review{
+    width: 1370px;
+    height: 200px;
+    background-color: rgb(246, 246, 246);
+    margin-top: 20px;
+}
+#profile1{
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+.reviewName{
+    position: relative;
+    left: 120px;
+    font-family: 'Montserrat', sans-serif;
+    top: -35px;
+    font-size: 22px;
+}
+.reviewDate{
+    position: relative;
+    left: 120px;
+    font-family: 'Montserrat', sans-serif;
+    top: -55px;
+    font-size: 18px;
+    color: rgb(70, 70, 70);
+}
+.revStars{
+    position: relative;
+    left: 120px;
+    top: -75px;
+}
+.reviewText{
+    position: relative;
+    left: 120px;
+    font-family: 'Montserrat', sans-serif;
+    top: -65px;
+    font-size: 18px;
+    color: rgb(70, 70, 70);
+}
+.SeeMore{
+    width: 130px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Fredoka', sans-serif;
+}
+/*Info Box~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.infoBox{
+    border: rgb(209, 209, 209) 1px solid;
+    margin-left: 55px;
+    margin-top: 50px;
+    width: 1400px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.infoHead{
+    font-size: 17px;
+}
+.infoText{
+    font-size: 15px;
+    margin-top: -15px;
+    color: rgb(48, 48, 48);
+}
+.Section1{
+    margin-top: 25px;
+    margin-left: 80px;
+}
+.Section2{
+    margin-top: -65px;
+    margin-left: 440px;
+    color: rgb(0, 0, 0);
+}
+.Section3{
+    margin-top: -65px;
+    margin-left: 820px;
+    color: rgb(0, 0, 0);
+}
+.Section4{
+    margin-top: -65px;
+    margin-left: 1200px;
+    color: rgb(0, 0, 0);
+}
+.shippingIcon{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -75px;
+}
+.returnIcon{
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 7px;
+}
+.secureIcon{
+    position: absolute;
+    margin-left: -60px;
+}
+.phoneIcon{
+    position: absolute;
+    margin-left: -50px;
+}
+/*FOOTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
+
+.Bottom{
+    background-color: rgb(245,245,245);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    border-bottom: rgb(245,245,245) solid 260px;
+}
+.botTitle{
+    color: black;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botInformation{
+    margin-left: 450px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botAccount{
+    margin-left: -240px;
+    font-family: 'Open Sans', sans-serif;
+}
+.botLetter{
+    margin-left: -350px;
+    font-family: 'Open Sans', sans-serif;
+}
+.eFormBox{
+    color: blue;
+    width: 330px;
+    height: 40px;
+}
+.eFormButton{
+    width: 145px;
+    height: 50px;
+    color: white;
+    background-color: black;
+}
+.botListAccount{
+    color: black;
+}
+#botLogo{
+    position: absolute;
+    left: 70px;
+}
+#botLogoTitle{
+    position: absolute;
+    left: 190px;
+    font-size: 50px;
+}
+#botLogoTitle2{
+    position: absolute;
+    left: 205px;
+    font-size: 35px;
+    margin-top: 50px;
+    font-family: 'Smooch Sans', sans-serif;
+}
+#botLogoTitle3{
+    position: absolute;
+    left: 80px;
+    font-size: 18px;
+    margin-top: 110px;
+    color: rgb(104, 104, 104);
+}
+.botInformation{
+    position: absolute;
+    left: 120px;
+}
+.botAccount{
+    position: absolute;
+    left: 1020px;
+}
+.botLetter{
+    position: absolute;
+    left: 1350px;
+}
+/*Logo Links*/
+.botFacebook{
+    position: absolute;
+    margin-top: 260px;
+    left: 83px;
+}
+.botTwitter{
+    position: absolute;
+    margin-top: 260px;
+    left: 123px;
+}
+.botInstagram{
+    position: absolute;
+    margin-top: 260px;
+    left: 163px;
+}
+.botIndeed{
+    position: absolute;
+    margin-top: 260px;
+    left: 203px;
+}
+
